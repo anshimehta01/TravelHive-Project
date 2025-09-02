@@ -1,0 +1,53 @@
+/* Add your pricing page specific styles here */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pricing-card.basic {
+  border-top: 4px solid #2a9d8f;
+}
+
+.pricing-card.advance {
+  border-top: 4px solid #e76f51;
+}
+
+.pricing-card.premium {
+  border-top: 4px solid #264653;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.pricing-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2a9d8f;
+  font-weight: bold;
+}

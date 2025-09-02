@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelHive | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <style>
+    :root {
+      --primary: #2a9d8f;
+      --secondary: #e76f51;
+      --accent: #83c5be;
+      --light: #f8f9fa;
+      --dark: #264653;
+      --success: #4CAF50;
+      --error: #F44336;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, rgba(42, 157, 143, 0.9), rgba(131, 197, 190, 0.8)), 
+                  url('../static/images/Travel.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    /* ... rest of your existing login styles ... */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <h1>TravelHive</h1>
+      <p>Explore Together</p>
+    </div>
+
+    <div class="tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="signupTab">Sign Up</button>
+    </div>
+
+    <div id="loginForm" class="form active">
+      <form id="login">
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="loginEmail" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div id="signupForm" class="form">
+      <form id="signup">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="signupName" placeholder="Full Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="signupEmail" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="signupPassword" placeholder="Password" required>
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginTab = document.getElementById('loginTab');
+      const signupTab = document.getElementById('signupTab');
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      const message = document.getElementById('message');
+
+      const switchTab = (activeTab, activeForm) => {
+        [loginTab, signupTab].forEach(tab => tab.classList.remove('active'));
+        [loginForm, signupForm].forEach(form => form.classList.remove('active'));
+        
+        activeTab.classList.add('active');
+        activeForm.classList.add('active');
+        message.textContent = '';
+        message.className = '';
+      };
+
+      loginTab.addEventListener('click', () => switchTab(loginTab, loginForm));
+      signupTab.addEventListener('click', () => switchTab(signupTab, signupForm));
+
+      document.getElementById('signup').addEventListener('submit', (e) => {
+        e.preventDefault();
+        message.textContent = 'Account created successfully!';
+        message.className = 'success';
+        e.target.reset();
+        setTimeout(() => switchTab(loginTab, loginForm), 1500);
+      });
+
+      document.getElementById('login').addEventListener('submit', (e) => {
+        e.preventDefault();
+        message.textContent = 'Logged in successfully! Redirecting...';
+        message.className = 'success';
+        setTimeout(() => window.location.href = 'index.html', 1000);
+      });
+    });
+  </script>
+</body>
+</html>

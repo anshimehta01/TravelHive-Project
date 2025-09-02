@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelHive - Explore Together</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../static/css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">Travel<span>Hive</span></div>
+    <nav class="nav-bar">
+      <a href="index.html">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="Booking.html">Booking</a>
+      <a href="pricing.html">Packages</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Explore the beauty of <span>Uttarakhand</span> with TravelHive</h1>
+      <p>Join solo travelers, find companions, and create unforgettable memories across breathtaking destinations in Uttarakhand only.</p>
+      <button class="btn">Get Started</button>
+    </div>
+    <div class="hero-image">
+      <img src="../static/images/Travel.jpg" alt="Group of travelers hiking">
+    </div>
+  </section>
+
+  <section class="services" id="destinations" style="background-color: #f0fdfd;">
+    <h2 class="section-title">Top Destinations in Uttarakhand</h2>
+    <div class="destination-cards">
+      <a href="destination.html">
+        <div class="service">
+          <i class="fas fa-mountain"></i>
+          <h4>Auli</h4>
+          <p>Famous for skiing and stunning Himalayan views. A snowy paradise awaits.</p>
+        </div>
+      </a>
+      <a href="destination.html">
+        <div class="service">
+          <i class="fas fa-water"></i>
+          <h4>Rishikesh</h4>
+          <p>Adventure meets spirituality: River rafting, yoga, and peace by the Ganges.</p>
+        </div>
+      </a>
+      <a href="destination.html">
+        <div class="service">
+          <i class="fas fa-leaf"></i>
+          <h4>Valley of Flowers</h4>
+          <p>Explore colorful blooms in this UNESCO-protected alpine national park.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="service-list">
+      <div class="service">
+        <i class="fas fa-users"></i>
+        <h4>Group Matching</h4>
+        <p>Connect with like-minded travelers heading to the same destination and you can create the Group by using chat room.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-comments"></i>
+        <h4>Real-time Chat</h4>
+        <p>Communicate instantly with your travel group through our messaging platform.</p>
+        <a href="https://3oqdjsedfvw4f95wwh5wwx.streamlit.app/" target="_blank" style="font-weight: bold; color: rgb(208, 41, 41); text-decoration: none;">Chat Room Link</a>
+      </div>
+      <div class="service">
+        <i class="fas fa-map-marked-alt"></i>
+        <h4>Local Guide</h4>
+        <p>Each group is accompanied by a local guide assigned at the destination, who provides a comprehensive tour of the place.</p>
+      </div>
+    </div>
+    <div class="service">
+      <i class="fas fa-map-marked-alt"></i>
+      <h4>Different Packages</h4>
+      <p>TravelHive offers a range of travel packages Basic, Advance, and Premium tailored to your comfort and travel needs.</p>
+      <a href="pricing.html" target="_blank" style="font-weight: bold; color: rgb(208, 41, 41); text-decoration: none;">Packages</a>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>TravelHive</h3>
+        <p>Making solo travel social since 2025. Join our community of 50,000+ travelers.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:hello@travelhive.com">hello@travelhive.com</a></li>
+          <li><a href="tel:+11234567890">+91 7217345477</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://3oqdjsedfvw4f95wwh5wwx.streamlit.app/" target="_blank" class="chat-logo">
+            <div class="chat-icon">💬</div>
+            <span>Chat Room</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 TravelHive. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector(".btn").addEventListener("click", () => {
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

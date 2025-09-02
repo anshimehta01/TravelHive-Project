@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelHive Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <style>
+    :root {
+      --primary: #2a9d8f;
+      --secondary: #e76f51;
+      --accent: #83c5be;
+      --light: #f8f9fa;
+      --dark: #264653;
+      --text: #333;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s ease;
+    }
+
+    .hero-banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('../static/images/Travel.jpg') center/cover;
+    }
+    /* ... rest of your existing styles ... */
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-map-marked-alt"></i>
+      Travel<span>Hive</span>
+    </div>
+    <nav class="nav-bar">
+      <a href="index.html">Home</a>
+      <a href="destination.html">Destinations</a>
+      <a href="#contact">Contact</a>
+      <a href="Booking.html">Booking</a>
+      <a href="pricing.html">Packages</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero-banner">
+    <h1>Discover Amazing Destinations</h1>
+    <p>Explore our curated selection of breathtaking locations perfect for solo travelers and groups alike</p>
+  </section>
+
+  <section class="destinations-container">
+    <div class="section-title">
+      <h2>Featured Destinations</h2>
+    </div>
+
+    <div class="destinations-grid" id="destinations">
+      <!-- Destinations will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>TravelHive</h3>
+        <p>Making solo travel social since 2023. Join our community of adventurous travelers.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Destinations</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:hello@travelhive.com">hello@travelhive.com</a></li>
+          <li><a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 TravelHive. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const destinations = [
+      {
+        name: "Rishikesh",
+        image: "../static/images/Rishikesh.jpg",
+        description: "The yoga capital of the world, offering river rafting and spiritual retreats along the Ganges."
+      },
+      {
+        name: "Haridwar",
+        image: "../static/images/Haridwar.jpg",
+        description: "Holy city known for the Ganga Aarti at Har Ki Pauri and its religious significance."
+      },
+      {
+        name: "Nainital",
+        image: "../static/images/Nainital.jpg",
+        description: "A picturesque hill station with a beautiful lake, ideal for boating and relaxation."
+      },
+      {
+        name: "Mussoorie",
+        image: "../static/images/Mussoorie.jpg",
+        description: "The Queen of Hills with stunning mountain vistas and colonial charm."
+      },
+      {
+        name: "Auli",
+        image: "../static/images/Auli.jpg",
+        description: "Popular skiing destination with snow-covered slopes and Himalayan views."
+      }
+    ];
+
+    const container = document.getElementById("destinations");
+
+    destinations.forEach(dest => {
+      const card = document.createElement("div");
+      card.className = "destination-card";
+      card.innerHTML = `
+        <div class="card-image">
+          <img src="${dest.image}" alt="${dest.name}">
+        </div>
+        <div class="card-content">
+          <h3>${dest.name}</h3>
+          <p>${dest.description}</p>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
