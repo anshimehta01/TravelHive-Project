@@ -78,11 +78,11 @@ http://localhost:3000
 
 🚧 Known Limitations
 
-UI/UX is currently basic
+ UI/UX is currently basic
 
-No live API integration yet
+ No live API integration yet
 
-No real-time collaboration 
+ No real-time collaboration 
 
 
 
