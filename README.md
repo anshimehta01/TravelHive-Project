@@ -1,6 +1,6 @@
 # 🌍 TravelHive
 
-**TravelHive** is a smart web-based travel planner that helps users organize and manage trips efficiently.  
+**TravelHive** is a smart web-based travel planner that helps users organize and manage their trips efficiently.  
 It includes secure authentication, a trip dashboard, and MongoDB-backed persistence.
 
 ---
